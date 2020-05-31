@@ -1,0 +1,41 @@
+SUPERGLOBALS
+---------------------------------------------------------------
+$_SESSION-
+-You can store information in variables, to be used across mulitple pages.
+-Information is not stored on the user's computer, as it is with cookies.
+-By defualt, session variables last until the user closes the browser.
+
+session_start()-
+-A session is started using the session_start() function.
+-Use the PHP global $_SESSION to set session variables.
+
+<?php
+session_start();
+$_SESSION['variable'] = "value";
+?>
+
+-The session_start() function must be the very first thing in your document. Before any HTML tags.
+-Another page can be created that can access the session variables we set in the previous page.
+-All global session variables can be removed manually by using session_unset(). You can also destroy the session with session_destroy().
+ex.
+session_start();
+$name = "Alex"; // declare variable
+$_SESSION['name'] = $name; // add to session
+echo $_SESSION['name']; // print
+
+---------------------------------------------------------------
+$_COOKIES-
+-Super global variable used to identify the user. A cookie is a small file that the server embeds on the user's computer.
+-setcookie(name, value, expire, path, domain, secure, httponly);
+---------------------------------------------------------------
+$_SERVER-
+-Super global array that holds information about headers, paths, and script locations.
+---------------------------------------------------------------
+$_REQUEST
+-Super global variable used to collect data after submitting an HTML form.
+---------------------------------------------------------------
+$_POST
+-Super global variable used to collect form data after submitting an HTNL form with method="post". $_POST is also widely used to pass variables.
+---------------------------------------------------------------
+$_GET
+-Super global variable used to collect form data 

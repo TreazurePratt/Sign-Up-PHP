@@ -1,0 +1,22 @@
+.container {
+    background-color: aliceblue;
+    width: 50vh;
+}
+
+input[type=text], input[type=password] {
+    padding: 5px;
+    margin: 5px 0 20px 0;
+}
+
+.btn {
+    padding: 5px 20px;
+    border-radius: 25px;
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+.error {
+    border-color: red;
+}
